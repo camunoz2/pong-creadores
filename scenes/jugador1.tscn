@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcdunrljj7kl8"]
+
+[ext_resource type="Script" path="res://scripts/player1.gd" id="1_yh7t0"]
+[ext_resource type="Texture2D" uid="uid://o8cvgkf6p0wd" path="res://art/Paleta_Celeste.png" id="2_gkidp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuqd5"]
+size = Vector2(4, 18)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player1" type="CharacterBody2D" parent="."]
+script = ExtResource("1_yh7t0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player1"]
+position = Vector2(5, 46)
+shape = SubResource("RectangleShape2D_yuqd5")
+
+[node name="Sprite2D" type="Sprite2D" parent="player1"]
+position = Vector2(5, 46)
+texture = ExtResource("2_gkidp")
