@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://br0vl5g7fr13q"]
+
+[ext_resource type="Script" path="res://scenes/player2.gd" id="1_qwsv1"]
+[ext_resource type="Texture2D" uid="uid://cnao3d1prux14" path="res://art/Paleta_Morada.png" id="2_26f4y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuqd5"]
+size = Vector2(4, 18)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player2" type="CharacterBody2D" parent="."]
+script = ExtResource("1_qwsv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
+position = Vector2(192, 46)
+shape = SubResource("RectangleShape2D_yuqd5")
+
+[node name="Sprite2D" type="Sprite2D" parent="player2"]
+position = Vector2(193, 46)
+texture = ExtResource("2_26f4y")
