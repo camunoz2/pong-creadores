@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://byh4hsx8u8n0q"]
+[gd_scene load_steps=4 format=3 uid="uid://dpbrv1ix3sytl"]
 
 [ext_resource type="Script" path="res://scripts/Colision_Pelota.gd" id="1_rddtv"]
 [ext_resource type="Texture2D" uid="uid://damgwpecpxd87" path="res://art/Pelota.png" id="2_aliej"]

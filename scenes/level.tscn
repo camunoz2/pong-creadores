@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1eqflsx4j3aa"]
+
+[ext_resource type="PackedScene" uid="uid://br0vl5g7fr13q" path="res://scenes/jugador2.tscn" id="1_k6g44"]
+[ext_resource type="PackedScene" uid="uid://bcdunrljj7kl8" path="res://scenes/jugador1.tscn" id="2_dnqt8"]
+[ext_resource type="PackedScene" uid="uid://dpbrv1ix3sytl" path="res://scenes/pelota.tscn" id="3_3okve"]
+
+[node name="level" type="Node2D"]
+
+[node name="jugador2" parent="." instance=ExtResource("1_k6g44")]
+
+[node name="jugador1" parent="." instance=ExtResource("2_dnqt8")]
+
+[node name="Pelota" parent="." instance=ExtResource("3_3okve")]
+position = Vector2(96, 47)
