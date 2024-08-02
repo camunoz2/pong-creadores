@@ -19,7 +19,7 @@ func _ready():
 	linear_velocity = velocity
 
 	# Conectar la señal de colisión
-
+	connect("body_entered", self, "_on_body_entered")
 
 func _integrate_forces(state):
 	# Obtener el tamaño del viewport
@@ -33,6 +33,9 @@ func _integrate_forces(state):
 	if position.x <= 0 or position.x >= viewport_size.x:
 		linear_velocity.x = -linear_velocity.x
 
+	# Mantener la velocidad constante
+	linear_velocity = linear_velocity.normalized() * initial_speed
+
 func _on_body_entered(body):
 	if body.is_in_group("paddle"):  # Asumiendo que las paletas están en el grupo "paddle"
 		# Invertir la dirección horizontal
@@ -40,7 +43,11 @@ func _on_body_entered(body):
 
 		# Opcional: Ajustar la dirección vertical según el punto de impacto
 		var diff = position.y - body.position.y
-		linear_velocity.y = diff * 10  # Ajusta el factor según sea necesario
+		linear_velocity.y += diff * 10  # Ajusta el factor según sea necesario
+
+		# Mantener la velocidad constante
+		linear_velocity = linear_velocity.normalized() * initial_speed
+
 
 
 
