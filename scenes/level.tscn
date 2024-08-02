@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://dqbg3crlwuaxp"]
+[gd_scene load_steps=3 format=3 uid="uid://dqbg3crlwuaxp"]
+
+[ext_resource type="PackedScene" uid="uid://br0vl5g7fr13q" path="res://scenes/jugador2.tscn" id="1_k6g44"]
+[ext_resource type="PackedScene" uid="uid://bcdunrljj7kl8" path="res://scenes/jugador1.tscn" id="2_dnqt8"]
 
 [node name="Level" type="Node2D"]
+
+[node name="player2" parent="." instance=ExtResource("1_k6g44")]
+
+[node name="plyer1" parent="." instance=ExtResource("2_dnqt8")]
