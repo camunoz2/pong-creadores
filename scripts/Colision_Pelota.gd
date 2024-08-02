@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 # Velocidad inicial de la pelota
-var initial_speed = 200
+var initial_speed = 100
 var velocity = Vector2.ZERO
 
 func _ready():
@@ -21,7 +21,7 @@ func _ready():
 	# Conectar la señal de colisión
 
 
-func _integrate_forces(state):
+func _integrate_forces(_state):
 	# Obtener el tamaño del viewport
 	var viewport_size = get_viewport_rect().size
 
