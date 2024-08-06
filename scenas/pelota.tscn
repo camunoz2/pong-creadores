@@ -1,15 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpbrv1ix3sytl"]
 
-[ext_resource type="Texture2D" uid="uid://damgwpecpxd87" path="res://art/Pelota.png" id="2_aliej"]
+[ext_resource type="Texture2D" uid="uid://damgwpecpxd87" path="res://arte/Pelota.png" id="1_nlbud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p4ax"]
-size = Vector2(4, 4)
+size = Vector2(31, 29)
 
 [node name="Pelota" type="RigidBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_5p4ax")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1.33333, 1.5)
-texture = ExtResource("2_aliej")
+scale = Vector2(10, 10)
+texture = ExtResource("1_nlbud")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1eqflsx4j3aa"]
+
+[ext_resource type="PackedScene" uid="uid://br0vl5g7fr13q" path="res://scenas/jugador2.tscn" id="1_k6g44"]
+[ext_resource type="PackedScene" uid="uid://dpbrv1ix3sytl" path="res://scenas/pelota.tscn" id="1_puet3"]
+[ext_resource type="PackedScene" uid="uid://bcdunrljj7kl8" path="res://scenas/jugador1.tscn" id="2_dnqt8"]
+
+[node name="nivel" type="Node2D"]
+
+[node name="Pelota" parent="." instance=ExtResource("1_puet3")]
+z_index = 1
+position = Vector2(364, 240)
+
+[node name="fondo" type="ColorRect" parent="."]
+offset_right = 717.0
+offset_bottom = 483.0
+color = Color(0.0272, 0.05814, 0.17, 1)
+
+[node name="separador" type="ColorRect" parent="."]
+offset_left = 360.0
+offset_right = 370.0
+offset_bottom = 480.0
+pivot_offset = Vector2(5, 0)
+
+[node name="jugador2" parent="." instance=ExtResource("1_k6g44")]
+z_index = 1
+position = Vector2(668, 230)
+
+[node name="jugador1" parent="." instance=ExtResource("2_dnqt8")]
+z_index = 1
+position = Vector2(43, 236)

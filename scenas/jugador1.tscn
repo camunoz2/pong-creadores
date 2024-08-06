@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bcdunrljj7kl8"]
 
 [ext_resource type="Script" path="res://scripts/player1.gd" id="1_wb8d7"]
-[ext_resource type="Texture2D" uid="uid://o8cvgkf6p0wd" path="res://art/Paleta_Celeste.png" id="2_gkidp"]
+[ext_resource type="Texture2D" uid="uid://o8cvgkf6p0wd" path="res://arte/Paleta_Celeste.png" id="2_gkidp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuqd5"]
 size = Vector2(25, 93)

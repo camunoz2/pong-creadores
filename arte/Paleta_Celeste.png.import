@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnao3d1prux14"
-path="res://.godot/imported/Paleta_Morada.png-d565169e41a542351407fcac63cd834b.ctex"
+uid="uid://o8cvgkf6p0wd"
+path="res://.godot/imported/Paleta_Celeste.png-7d1fe92bcd11a52ffeaecc889efb964f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Paleta_Morada.png"
-dest_files=["res://.godot/imported/Paleta_Morada.png-d565169e41a542351407fcac63cd834b.ctex"]
+source_file="res://arte/Paleta_Celeste.png"
+dest_files=["res://.godot/imported/Paleta_Celeste.png-7d1fe92bcd11a52ffeaecc889efb964f.ctex"]
 
 [params]
 
