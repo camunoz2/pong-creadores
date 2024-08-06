@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://o8klhoro6cgn"]
 
-[ext_resource type="Script" path="res://Game over.gd" id="1_5kuql"]
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_6uhbp"]
 
 [node name="Game over" type="Node2D"]
-script = ExtResource("1_5kuql")
+script = ExtResource("1_6uhbp")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
