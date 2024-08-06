@@ -28,3 +28,27 @@ position = Vector2(668, 230)
 [node name="jugador1" parent="." instance=ExtResource("2_dnqt8")]
 z_index = 1
 position = Vector2(43, 236)
+
+[node name="ScoreLabel1" type="Label" parent="."]
+z_index = 1
+offset_left = 304.0
+offset_top = 15.0
+offset_right = 339.0
+offset_bottom = 48.0
+pivot_offset = Vector2(6, 17)
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel2" type="Label" parent="."]
+z_index = 1
+offset_left = 411.0
+offset_top = 14.0
+offset_right = 434.0
+offset_bottom = 69.0
+pivot_offset = Vector2(6, 17)
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
