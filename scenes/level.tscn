@@ -15,7 +15,7 @@ script = ExtResource("1_qgk8s")
 [node name="jugador1" parent="." instance=ExtResource("2_dnqt8")]
 script = ExtResource("4_wdkrg")
 
-[node name="Pelota" parent="." instance=ExtResource("3_3okve")]
+[node name="pelota" parent="." instance=ExtResource("3_3okve")]
 position = Vector2(96, 47)
 
-[node name="Game over" parent="." instance=ExtResource("4_x1c5u")]
+[node name="GameManager" parent="." instance=ExtResource("4_x1c5u")]
