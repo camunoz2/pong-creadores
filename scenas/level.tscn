@@ -9,6 +9,8 @@
 [node name="Pelota" parent="." instance=ExtResource("1_puet3")]
 z_index = 1
 position = Vector2(364, 240)
+mass = 0.01
+gravity_scale = 0.0
 
 [node name="fondo" type="ColorRect" parent="."]
 offset_right = 717.0
