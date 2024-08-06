@@ -1,21 +1,47 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1eqflsx4j3aa"]
+[gd_scene load_steps=4 format=3 uid="uid://b1eqflsx4j3aa"]
 
 [ext_resource type="PackedScene" uid="uid://br0vl5g7fr13q" path="res://scenes/jugador2.tscn" id="1_k6g44"]
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_qgk8s"]
 [ext_resource type="PackedScene" uid="uid://bcdunrljj7kl8" path="res://scenes/jugador1.tscn" id="2_dnqt8"]
-[ext_resource type="PackedScene" uid="uid://dpbrv1ix3sytl" path="res://scenes/pelota.tscn" id="3_3okve"]
-[ext_resource type="Script" path="res://scripts/player1.gd" id="4_wdkrg"]
-[ext_resource type="PackedScene" uid="uid://o8klhoro6cgn" path="res://scenes/game_over.tscn" id="4_x1c5u"]
+
+[sub_resource type="GDScript" id="GDScript_phor3"]
+script/source = "extends Node2D
+
+@export var velocidad_pelota: float = 300.0
+
+var pelota: Node2D
+var direccion: Vector2
+var game_over_signal: Signal
+
+func _ready():
+	pelota = $Pelota
+	direccion = Vector2(1, 1).normalized()
+	
+	# Crear y conectar la señal para el Game Over
+	game_over_signal = Signal()
+	game_over_signal.connect(_on_game_over)
+
+func _process(delta: float) -> void:
+	mover_pelota(delta)
+	verificar_colisiones()
+
+func mover_pelota(delta: float) -> void:
+	pelota.position += direccion * velocidad_pelota * delta
+
+func verificar_colisiones() -> void:
+	if pelota.position.x < 0 or pelota.position.x > get_viewport().size.x:
+		game_over_signal.emit()
+	elif pelota.position.y < 0 or pelota.position.y > get_viewport().size.y:
+		direccion.y = -direccion.y
+
+func _on_game_over() -> void:
+	get_tree().change_scene(\"res://GameOver.tscn\")
+
+
+"
 
 [node name="level" type="Node2D"]
-script = ExtResource("1_qgk8s")
+script = SubResource("GDScript_phor3")
 
 [node name="jugador2" parent="." instance=ExtResource("1_k6g44")]
 
 [node name="jugador1" parent="." instance=ExtResource("2_dnqt8")]
-script = ExtResource("4_wdkrg")
-
-[node name="pelota" parent="." instance=ExtResource("3_3okve")]
-position = Vector2(96, 47)
-
-[node name="GameManager" parent="." instance=ExtResource("4_x1c5u")]
