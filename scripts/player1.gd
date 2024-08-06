@@ -1,11 +1,5 @@
-extends CharacterBody2D
+extends "res://scripts/player_base.gd"
 
-@export var speed = 400
-
-func get_input():
-	var input_direction = Input.get_vector("left", "right", "p1_up", "p1_down")
-	velocity = input_direction * speed
-
-func _physics_process(delta):
-	get_input()
-	move_and_slide()
+func _ready():
+	up_action = "p1_up"
+	down_action = "p1_down"
